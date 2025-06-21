@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\CvInputController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[CvInputController::class,'index'])->name('CvInput.index');

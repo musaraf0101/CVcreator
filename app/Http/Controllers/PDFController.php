@@ -44,26 +44,9 @@ class PDFController extends Controller
             'social_url.*' => 'nullable|url',
         ]);
 
-
-        // $data = [
-        //     'title' => 'My Resume',
-        //     'name' => $request->input('name'),
-        //     'email' => $request->input('email'),
-        //     'phone_number' => $request->input('phone_number'),
-        //     'objective' => $request->input('objective'),
-        //     'education' => $request->input('education'),
-        //     'qualification' => $request->input('qualification'),
-        //     'projects' => $request->input('project_title'),
-        //     'project_links' => $request->input('project_link'),
-        //     'project_descriptions' => $request->input('project_description'),
-        //     'skills' => $request->input('skill'),
-        //     'proficiencies' => $request->input('proficiency'),
-        //     'certificates' => $request->input('certificate_institute'),
-        // ];
-
         $data = $request->all();
 
-        $pdf = Pdf::loadView('pdf.resume', $data);
+        $pdf = Pdf::loadView('components.cv', $data);
 
         return $pdf->download('resume.pdf');
     }

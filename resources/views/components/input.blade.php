@@ -139,10 +139,10 @@
                             </button>
                         </div>
 
-
                         <div class="d-grid">
-                            <a href="/generate-pdf" class="btn btn-primary">View CV</a>
+                            <button type="submit" class="btn btn-primary">Download CV</button>
                         </div>
+
                     </form>
                 </div>
             </div>

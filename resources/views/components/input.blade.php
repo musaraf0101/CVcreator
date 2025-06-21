@@ -141,7 +141,7 @@
 
 
                         <div class="d-grid">
-                            <a href="/view-cv" class="btn btn-primary">View CV</a>
+                            <a href="/generate-pdf" class="btn btn-primary">View CV</a>
                         </div>
                     </form>
                 </div>

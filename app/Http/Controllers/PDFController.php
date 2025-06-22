@@ -26,8 +26,6 @@ class PDFController extends Controller
             'project_description.*' => 'nullable|string',
             'skill' => 'required|array',
             'skill.*' => 'required|string',
-            'proficiency' => 'required|array',
-            'proficiency.*' => 'required|string',
             'certificate_institute' => 'required|array',
             'certificate_institute.*' => 'required|string',
             'certificate_start' => 'required|array',
@@ -46,7 +44,7 @@ class PDFController extends Controller
 
         $data = $request->all();
 
-        $pdf = Pdf::loadView('components.cv', $data);
+        $pdf = Pdf::loadView('components.cv', compact('data'));
 
         return $pdf->download('resume.pdf');
     }
